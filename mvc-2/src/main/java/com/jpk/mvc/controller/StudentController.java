@@ -22,8 +22,8 @@ public class StudentController {
 	}
 	
 	@PostMapping("send")
-	public String sendStudent(@RequestParam String name, Model model) {
-		model.addAttribute("message", "Hello" + name);
+	public String sendStudent(@RequestParam("name") String name, Model model) {
+		model.addAttribute("message", "Hello " + name);
 		return "addNewStudent";
 	}
 	
