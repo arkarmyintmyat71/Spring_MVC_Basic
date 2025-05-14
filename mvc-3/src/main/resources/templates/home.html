@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>MVC 3</title>
+</head>
+<body>
+	<h1>Controller Method Argument</h1>
+	<ul>
+		<li>
+			<a href="#" th:href="@{/path-demo/{name}}">Path Variable String</a>
+		</li>
+		<li>
+			<a href="#" th:href="@{/path-demo-int/100}">Path Variable Integer</a>
+		</li>
+		<li>
+			<a href="#" th:href="@{/path-demo(name=Arkar)}">Query Parameter</a>
+		</li>
+	</ul>
+	 
+	 <form action="#" th:action = "@{/path-demo}">
+	 	<input name= "name"/>
+	 	<input type="submit" value= "Send"/>
+	 </form>
+	<span th:text = "${message}"></span>
+</body>
+</html>
